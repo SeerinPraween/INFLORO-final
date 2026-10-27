@@ -416,7 +416,7 @@ export default function BrandCampaignsPage() {
                   <p>{campaign.description}</p>
 
                   <div className="brand-campaign-deliverables">
-                    <span><FileVideo size={15} /> {campaign.deliverables}</span>
+                    <span><FileVideo  /> {campaign.deliverables}</span>
                     <span><CalendarDays size={15} /> Deadline: {campaign.deadline}</span>
                   </div>
 
