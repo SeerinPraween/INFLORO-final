@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function SimplePage() { return <main className="document-page"><section className="document-hero"><div className="eyebrow"><span className="eyebrow-dot" /> INFLORO</div><h1>Privacy Policy</h1><p>Review how account information and data are handled. Publish the approved legal policy before launch.</p><div className="hero-actions"><Link href="/get-started" className="button button-primary">Get Started →</Link><Link href="/book-a-demo" className="button button-quiet">Book a Demo ↗</Link></div></section></main>; }

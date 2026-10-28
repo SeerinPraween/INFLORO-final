@@ -1,0 +1,6 @@
+import Link from "next/link";
+export default async function ResourceDetail({ params }: { params: Promise<{ slug?: string; category?: string }> }) {
+  const { slug = "resource", category = "creator-marketing" } = await params;
+  const title = slug.split("-").map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
+  return <main className="document-page"><section className="document-hero"><div className="eyebrow"><span className="eyebrow-dot" /> INFLORO RESOURCE CENTER</div><h1>{title}</h1><p>Practical information and guidance for creator marketing teams. Content should be verified and populated before publication.</p><div className="hero-actions"><Link className="button button-primary" href="/resources">Explore Resources →</Link></div></section><section className="document-content"><article className="document-card"><h2>Overview</h2><p>Explain the subject, intended audience, principal questions, and practical implications. Clearly distinguish verified findings from estimates or recommendations.</p></article><article className="document-card"><h2>Related resources</h2><p>Browse more guidance for {category.replaceAll("-", " ")}.</p><Link href="/resources/guides">Guides &amp; Tutorials →</Link></article></section></main>;
+}
